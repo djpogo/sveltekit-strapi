@@ -37,6 +37,12 @@
     },
     "parentPage": {
       "model": "page"
+    },
+    "contents": {
+      "type": "dynamiczone",
+      "components": [
+        "page.simple-text"
+      ]
     }
   }
 }

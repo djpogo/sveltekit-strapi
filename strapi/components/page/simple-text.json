@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_page_simple_texts",
+  "info": {
+    "name": "SimpleText",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "richtext"
+    }
+  }
+}
