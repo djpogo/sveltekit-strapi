@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "navigations",
+  "info": {
+    "name": "Navigation"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Navigation": {
+      "type": "component",
+      "repeatable": true,
+      "component": "navigation.navigation"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_navigation_navigations",
+  "info": {
+    "name": "Navigation",
+    "icon": "list-alt"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "page": {
+      "model": "page"
+    }
+  }
+}
