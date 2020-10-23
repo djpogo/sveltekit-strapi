@@ -35,7 +35,7 @@
       "plugin": "upload",
       "required": false
     },
-    "page": {
+    "parentPage": {
       "model": "page"
     }
   }
