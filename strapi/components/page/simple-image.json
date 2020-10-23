@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_page_simple_images",
+  "info": {
+    "name": "SimpleImage",
+    "icon": "image"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

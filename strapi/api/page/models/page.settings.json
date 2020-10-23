@@ -41,7 +41,8 @@
     "contents": {
       "type": "dynamiczone",
       "components": [
-        "page.simple-text"
+        "page.simple-text",
+        "page.simple-image"
       ]
     }
   }
