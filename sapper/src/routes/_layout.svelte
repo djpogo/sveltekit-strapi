@@ -1,7 +1,16 @@
+<script context="module">
+import { navPreload } from '../strapi';
+export async function preload(page, session) {
+    const strapi = navPreload.bind(this);
+    return strapi(page, session);
+}
+</script>
+
 <script>
 	import Nav from '../components/Nav.svelte';
 
-	export let segment;
+  export let segment;
+  export let navPages;
 </script>
 
 <style>
@@ -15,7 +24,7 @@
 	}
 </style>
 
-<Nav {segment}/>
+<Nav {segment} {navPages} />
 
 <main>
 	<slot></slot>

@@ -12,3 +12,17 @@ export async function strapiPreload(page, session) {
     pageData: data.shift(),
   };
 }
+
+export async function navPreload(page, session) {
+  const res = await this.fetch(`http://localhost:1337/navigation`);
+  const data = await res.json();
+  if (res.status !== 200) {
+    this.error(res.status, data.message);
+  }
+  return {
+    navPages: data.Navigation.map((page) => ({
+      title: page.title,
+      url: page.page.slug,
+    })),
+  };
+}

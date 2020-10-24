@@ -1,5 +1,24 @@
 <script>
-	export let segment;
+  export let segment;
+  export let navPages;
+
+  function activePage(slug, segment) {
+    const clearSlug = slug.substr(1);
+    if (segment === undefined && clearSlug === '') {
+      return 'page'
+    }
+    if (segment === clearSlug) {
+      return 'page';
+    }
+    return undefined;
+  }
+
+  $: {
+    navPages = navPages.map((page) => ({
+      ...page,
+      active: activePage(page.url, segment),
+    }));
+  }
 </script>
 
 <style>
@@ -50,11 +69,8 @@
 
 <nav>
 	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
-
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li>
+    {#each navPages as page}
+    <li><a aria-current={page.active} href={page.url}>{page.title}</a></li>
+    {/each}
 	</ul>
 </nav>
