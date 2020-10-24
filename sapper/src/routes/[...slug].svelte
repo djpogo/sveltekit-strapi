@@ -7,9 +7,8 @@
 </script>
 
 <script>
+  import HtmlHead from '../components/HtmlHead.svelte';
   export let pageData;
 </script>
 
-<svelte:head>
-  <title>{pageData.title}</title>
-</svelte:head>
+<HtmlHead {pageData} />
