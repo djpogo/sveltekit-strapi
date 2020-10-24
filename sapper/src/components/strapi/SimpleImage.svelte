@@ -1,9 +1,10 @@
 <script>
+  const apiUrl = process.env.SAPPER_APP_API_URL;
   export let content;
 </script>
 
 <img
-  src={`http://localhost:1337${content.image.url}`}
+  src={`${apiUrl}${content.image.url}`}
   alt={content.image.alternativeText}
 >
 

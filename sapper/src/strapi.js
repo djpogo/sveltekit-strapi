@@ -1,5 +1,7 @@
+const apiUrl = process.env.SAPPER_APP_API_URL;
+
 export async function strapiPreload(page, session) {
-  const res = await this.fetch(`http://localhost:1337/pages?slug=${page.path}`);
+  const res = await this.fetch(`${apiUrl}/pages?slug=${page.path}`);
   const data = await res.json();
   if (res.status !== 200) {
     this.error(res.status, data.message);
@@ -14,7 +16,7 @@ export async function strapiPreload(page, session) {
 }
 
 export async function navPreload(page, session) {
-  const res = await this.fetch(`http://localhost:1337/navigation`);
+  const res = await this.fetch(`${apiUrl}/navigation`);
   const data = await res.json();
   if (res.status !== 200) {
     this.error(res.status, data.message);
