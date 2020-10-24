@@ -1,7 +1,7 @@
 # sapper/strapi website
 
 This is the example repository for this [blog post](https://raoulkramer.de/build-a-sapper-strapi-website) with a working
-code base for a sapper frontend consuming a strapi api.
+code base for a [sapper](https://sapper.svelte.dev/) frontend consuming a [strapi](https://strapi.io) api.
 
 ## setup
 
