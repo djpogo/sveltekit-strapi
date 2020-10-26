@@ -1,7 +1,7 @@
 const apiUrl = process.env.SAPPER_APP_API_URL;
 
 export async function strapiPreload(page, session) {
-  const res = await this.fetch(`${apiUrl}/pages?slug=${page.path}`);
+  const res = await this.fetch(`${apiUrl}/pages?slug=${encodeURIComponent(page.path)}`);
   const data = await res.json();
   if (res.status !== 200) {
     this.error(res.status, data.message);
