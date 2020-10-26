@@ -3,7 +3,7 @@
   export let navPages;
 
   function activePage(slug, segment) {
-    const clearSlug = slug.substr(1);
+    const clearSlug = slug ? slug.substr(1) : '';
     if (segment === undefined && clearSlug === '') {
       return 'page'
     }
