@@ -11,15 +11,23 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "name": {
-      "type": "string"
-    },
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "slug": {
       "type": "string",
       "unique": true
+    },
+    "fixSlug": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "indexPage": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     },
     "description": {
       "type": "text"
