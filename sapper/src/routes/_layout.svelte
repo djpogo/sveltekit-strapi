@@ -8,7 +8,6 @@ export async function preload(page, session) {
 
 <script>
 	import Nav from '../components/Nav.svelte';
-
   export let segment;
   export let navPages;
 </script>
@@ -24,7 +23,7 @@ export async function preload(page, session) {
 	}
 </style>
 
-<Nav {segment} {navPages} />
+<Nav {navPages} />
 
 <main>
 	<slot></slot>

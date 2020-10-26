@@ -1,23 +1,23 @@
 <script>
-  export let segment;
   export let navPages;
+  import { stores } from '@sapper/app';
+  const { page } = stores();
 
-  function activePage(slug, segment) {
-    const clearSlug = slug ? slug.substr(1) : '';
-    if (segment === undefined && clearSlug === '') {
+  page.subscribe(({ path }) => {
+    navPages = navPages.map((page) => ({
+      ...page,
+      active: activePage(page.url, path),
+    }));
+  });
+
+  function activePage(slug, path) {
+    if (path === undefined && slug === '/') {
       return 'page'
     }
-    if (segment === clearSlug) {
+    if (path === slug) {
       return 'page';
     }
     return undefined;
-  }
-
-  $: {
-    navPages = navPages.map((page) => ({
-      ...page,
-      active: activePage(page.url, segment),
-    }));
   }
 </script>
 
