@@ -22,6 +22,8 @@ and adjust your strapi endpoint.
 
 ```bash
  $ cd strapi
+ $ cp .env.example .env
+ $ # generate 2 jwt secrets for ADMIN_JWT_SECRET and JWT_SECRET
  $ npm ci
  $ npm run dev
 ```
