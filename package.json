@@ -1,0 +1,26 @@
+{
+  "name": "sapper-strapi",
+  "version": "1.0.1",
+  "description": "a sapper (svelte) strapi website boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "setup": "node ./setup"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djpogo/sapper-strapi.git"
+  },
+  "keywords": [
+    "sapper",
+    "strapi",
+    "svelte",
+    "headless-cms",
+    "node.js"
+  ],
+  "author": "Raoul Kramer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djpogo/sapper-strapi/issues"
+  },
+  "homepage": "https://github.com/djpogo/sapper-strapi#readme"
+}
