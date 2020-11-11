@@ -29,11 +29,13 @@ and adjust your strapi endpoint.
 
 ### strapi
 
+Please run `npm run setup` before you setup strapi, to create a suitable `.env` file.
+
 ```bash
+ $ npm run setup
  $ cd strapi
- $ cp .env.example .env
- $ # generate 2 jwt secrets for ADMIN_JWT_SECRET and JWT_SECRET
  $ npm ci
+ $ npm run build
  $ npm run dev
 ```
 
