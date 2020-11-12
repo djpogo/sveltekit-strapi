@@ -45,3 +45,26 @@ because many other frameworks start with `npm run dev`.
 Strapi installation was created with the `--quickstart` option, for now it uses a sqlite database.
 
 If you want to use a different database have a look at [Databases Documentation](https://strapi.io/documentation/v3.x/guides/databases.html) at the strapi documentation site.
+
+## first steps
+
+Without further action sapper will throw an error. To get around this you need to prepare your strapi instance.
+
+### create strapi admin account
+
+Go to [Strapi Admin](http://localhost:1337/admin), create your admin account and log in.
+
+### create an index page and publish it
+
+Click on `Pages` on the left hand menu and add a page. It is important to check the `IndexPage` box,
+so your website has a root page.
+
+Click on `Save` and now on `Publish`.
+
+### setp up a navigation
+
+Click on `Navigation` in the menu left and add your new created index page to the navigation.
+
+Click on `Save` and on `Publish`.
+
+Now sapper application will show you a navigation menu and a blank page, ready for your project.
