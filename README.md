@@ -3,6 +3,10 @@
 This is the example repository for this [blog post](https://raoulkramer.de/build-a-sapper-strapi-website) with a working
 code base for a [sapper](https://sapper.svelte.dev/) frontend consuming a [strapi](https://strapi.io) api.
 
+> **Sass support needed?**
+>
+> Have a look at the [sass branch](https://github.com/djpogo/sapper-strapi/tree/sass) of this repository, including the sass setup from [Sean Schertell](https://medium.com/@sean_27490)s article [Svelte / Sapper with Sass!](https://medium.com/@sean_27490/svelte-sapper-with-sass-271fff662da9).
+
 ## setup
 
 You can use `npm run setup` in the project folder, to create/update the strapi .env file
