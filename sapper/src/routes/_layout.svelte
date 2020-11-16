@@ -12,7 +12,9 @@ export async function preload(page, session) {
   export let navPages;
 </script>
 
-<style>
+<style lang="scss" global>
+  @import "../styles/global";
+
 	main {
 		position: relative;
 		max-width: 56em;
