@@ -12,24 +12,24 @@
     "compression": "^1.7.4",
     "polka": "next",
     "sapper-environment": "^1.0.1",
-    "sirv": "^1.0.7",
+    "sirv": "^1.0.9",
     "snarkdown": "^2.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
+    "@babel/core": "^7.12.9",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-env": "^7.12.7",
     "@babel/runtime": "^7.0.0",
-    "@rollup/plugin-babel": "^5.0.0",
+    "@rollup/plugin-babel": "^5.2.2",
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
     "@rollup/plugin-replace": "^2.2.0",
     "@rollup/plugin-url": "^5.0.0",
-    "rollup": "^2.3.4",
+    "rollup": "^2.34.2",
     "rollup-plugin-svelte": "^6.0.0",
     "rollup-plugin-terser": "^7.0.0",
     "sapper": "^0.28.10",
-    "svelte": "^3.29.7"
+    "svelte": "^3.31.0"
   }
 }
