@@ -12,7 +12,7 @@
     "compression": "^1.7.4",
     "polka": "next",
     "sapper-environment": "^1.0.1",
-    "sirv": "^1.0.9",
+    "sirv": "^1.0.10",
     "snarkdown": "^2.0.0"
   },
   "devDependencies": {
