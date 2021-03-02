@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_page_simple_texts",
+  "collectionName": "components_page_texts",
   "info": {
-    "name": "SimpleText",
+    "name": "Text",
     "icon": "align-justify"
   },
   "options": {},

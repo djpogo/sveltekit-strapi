@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_page_simple_images",
+  "collectionName": "components_page_images",
   "info": {
-    "name": "SimpleImage",
+    "name": "Image",
     "icon": "image"
   },
   "options": {},
