@@ -9,8 +9,8 @@ code base for a [sapper](https://sapper.svelte.dev/) frontend consuming a [strap
 
 ## setup
 
-You can use `npm run setup` in the project folder, to create/update the strapi .env file
-with the JWT_SECRETs it needs. This command will not change other values in your `./strapi/.env` file.
+You can use `npm run setup` in the project folder, to create the sapper .env and create/update the strapi .env file
+with the JWT_SECRETs it needs. This command will not change other values in your `.env` files.
 
 If you run this command on an existing strapi instance your backend and frontend strapi users will need to sign in again.
 
@@ -19,6 +19,8 @@ $ npm run setup
 ```
 
 ### sapper
+
+If you run `npm run setup` a `./sapper/.env` file is created, or create it by hand:
 
 ```bash
  $ cd sapper

@@ -1,53 +1,20 @@
 const fs = require('fs');
-const { COPYFILE_EXCL, R_OK, F_OK, W_OK } = fs.constants;
-const crypto = require('crypto');
+const {
+  fileExists,
+  fileWriteable,
+  copyEnv,
+  parseEnvFile,
+  updateJwt
+} = require('./fileUtils');
+
 const SECRET_LENGTH = 128;
 
-function fileExists(filePath) {
-  try {
-    return fs.lstatSync(filePath).isFile();
-  } catch (Exception) {
-    return false;
-  }
+// sapper env setup
+if (!fileExists('./sapper/.env')) {
+  copyEnv('./sapper');
 }
 
-function fileWriteable(filePath) {
-  fs.access(filePath, F_OK | W_OK | R_OK, (error) => {
-    if (error) throw error;
-  });
-}
-
-function copyEnv(path) {
-  const error = fs.copyFileSync(`${path}/.env.example`, `${path}/.env`, COPYFILE_EXCL);
-  if (!error) {
-    return;
-  }
-  if (error && error.code === 'EEXIST') {
-    console.info(`${path}/.env already exists`);
-    return;
-  }
-  if (error) throw error;
-  console.log(`Could not copy ${path}/.env.example to ${path}.env`);
-}
-
-function parseEnvFile(path) {
-  const fileContent = fs.readFileSync(`${path}/.env`, 'utf-8');
-  return fileContent.split('\n');
-}
-
-function updateJwt(data) {
-  return data.map((string) => {
-    if (string.indexOf('ADMIN_JWT_SECRET') === 0) {
-      return `ADMIN_JWT_SECRET=${crypto.randomBytes(SECRET_LENGTH).toString('base64')}`;
-    }
-    if (string.indexOf('JWT_SECRET') === 0) {
-      return `JWT_SECRET=${crypto.randomBytes(SECRET_LENGTH).toString('base64')}`;
-    }
-    return string;
-  });
-}
-
-
+// strapi .evn handling
 if (!fileExists('./strapi/.env')) {
   copyEnv('./strapi');
 }
@@ -60,7 +27,7 @@ try {
 }
 
 const envFileContent = parseEnvFile('./strapi');
-const updatedJwt = updateJwt(envFileContent);
+const updatedJwt = updateJwt(envFileContent, SECRET_LENGTH);
 const error = fs.writeFileSync('./strapi/.env', updatedJwt.join('\n'));
 if (error) {
   console.error('ERROR on writing .env file', error);

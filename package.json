@@ -1,6 +1,6 @@
 {
   "name": "sapper-strapi",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "a sapper (svelte) strapi website boilerplate",
   "main": "index.js",
   "scripts": {
