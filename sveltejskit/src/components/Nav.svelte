@@ -1,7 +1,6 @@
 <script>
   export let navPages;
-  /* import { stores } from '@sapper/app';
-  const { page } = stores();
+  import { page } from '$app/stores';
 
   page.subscribe(({ path }) => {
     navPages = navPages.map((page) => ({
@@ -18,7 +17,7 @@
       return 'page';
     }
     return undefined;
-  }*/
+  }
 </script>
 
 <style>
