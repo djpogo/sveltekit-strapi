@@ -1,15 +1,16 @@
-# sapper/strapi website
+# SvelteKit and strapi.io website
 
-This is the example repository for this [blog post](https://raoulkramer.de/build-a-sapper-strapi-website) with a working
-code base for a [sapper](https://sapper.svelte.dev/) frontend consuming a [strapi](https://strapi.io) api.
+This is the example project to this blog post [SvelteKit & Strapi](https://raoulkramer.de/build-a-sveltekit-strapi-website).
 
-> **Sass support needed?**
->
-> Have a look at the [sass branch](https://github.com/djpogo/sapper-strapi/tree/sass) of this repository, including the sass setup from [Sean Schertell](https://medium.com/@sean_27490)s article [Svelte / Sapper with Sass!](https://medium.com/@sean_27490/svelte-sapper-with-sass-271fff662da9).
+## issues
+
+**SvelteKit** is in early development, please have a look at the [SvelteKit Docs](https://kit.svelte.dev/docs) and [SvelteKit Github](https://github.com/sveltejs/kit) to see it's progress.
+
+Right now **the `apiUrl` is hardcoded** in my SvelteKit code. Search for `// TODO` to find the spots you need to alter.
 
 ## setup
 
-You can use `npm run setup` in the project folder, to create the sapper .env and create/update the strapi .env file
+You can use `npm run setup` in the project folder, to ~~create the sapper .env and~~ create/update the strapi .env file
 with the JWT_SECRETs it needs. This command will not change other values in your `.env` files.
 
 If you run this command on an existing strapi instance your backend and frontend strapi users will need to sign in again.
@@ -18,17 +19,11 @@ If you run this command on an existing strapi instance your backend and frontend
 $ npm run setup
 ```
 
-### sapper
+### SvelteKit
 
-If you run `npm run setup` a `./sapper/.env` file is created, or create it by hand:
-
-```bash
- $ cd sapper
- $ cp .env.example .env
-```
-and adjust your strapi endpoint.
 
 ```bash
+ $ cd sveltekit
  $ npm ci
  $ npm run dev
 ```
@@ -54,11 +49,15 @@ If you want to use a different database have a look at [Databases Documentation]
 
 ## first steps
 
-Without further action sapper will throw an error. To get around this you need to prepare your strapi instance.
+You need to configure your strapi installation before SvelteKit will show anything.
 
 ### create strapi admin account
 
 Go to [Strapi Admin](http://localhost:1337/admin), create your admin account and log in.
+
+### make pages and navigation public readable
+
+Click on `Settings` and `Roles` and choose `Public`. On `Navigation` allow `find` action, on `Pages` allow `findone`. Otherwise strapi will always return a `403` error.
 
 ### create an index page and publish it
 
@@ -73,4 +72,4 @@ Click on `Navigation` in the menu left and add your new created index page to th
 
 Click on `Save` and on `Publish`.
 
-Now sapper application will show you a navigation menu and a blank page, ready for your project.
+Now SvelteKit application will show you a navigation menu and a blank page, ready for your project.
