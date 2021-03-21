@@ -1,14 +1,17 @@
 <script context="module">
-  import { loadPage } from './_strapi';
+  import { loadPage } from '../_strapi';
   export async function load(loadOptions) {
     return await loadPage(loadOptions);
   };
 </script>
 
 <script>
+  import HtmlHead from '$lib/HtmlHead.svelte';
   import Strapi from '$lib/Strapi.svelte';
   export let pageData;
 </script>
+
+<HtmlHead {pageData} />
 
 <main>
   <Strapi contents={pageData.contents} />

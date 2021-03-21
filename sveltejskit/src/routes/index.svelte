@@ -6,9 +6,12 @@
 </script>
 
 <script>
+  import HtmlHead from '$lib/HtmlHead.svelte';
   import Strapi from '$lib/Strapi.svelte';
   export let pageData;
 </script>
+
+<HtmlHead {pageData} />
 
 <main>
   <Strapi contents={pageData.contents} />

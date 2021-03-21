@@ -8,9 +8,13 @@ const apiUrl = 'http://localhost:1337'; // TODO put apiEndpoint in .env file
 export async function loadNav({ fetch }) {
   const res = await fetch(`${apiUrl}/navigation`);
   if (res.ok) {
+    const data = await res.json();
     return {
       props: {
-        navPages: await res.json(),
+        navPages: data.Navigation.map((page) => ({
+          title: page.title,
+          url: page.page.slug,
+        })),
       },
     };
   }
@@ -33,9 +37,10 @@ export async function loadPage({ page, fetch }) {
   const res = await fetch(url);
 
   if (res.ok || res.status < 400) {
+    const [data] = await res.json();
     return {
       props: {
-        pageData: await [res.json()],
+        pageData: data,
       },
     };
   }
