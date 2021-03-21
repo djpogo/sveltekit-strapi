@@ -15,5 +15,8 @@
 	"type": "module",
 	"engines": {
 		"node": ">= 12.17.0"
+	},
+	"dependencies": {
+		"snarkdown": "^2.0.0"
 	}
 }
