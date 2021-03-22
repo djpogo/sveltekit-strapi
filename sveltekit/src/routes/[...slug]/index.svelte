@@ -13,9 +13,7 @@
 
 <HtmlHead {pageData} />
 
-<main>
-  <Strapi contents={pageData.contents} />
-</main>
+<Strapi contents={pageData.contents} />
 
 <style>
 	:root {
