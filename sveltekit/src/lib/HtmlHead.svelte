@@ -1,5 +1,5 @@
 <script>
-  const apiUrl = 'http://localhost:1337'; // TODO put apiEndpoint in .env file
+  const apiUrl = import.meta.env.VITE_API_URL;
   export let pageData;
 </script>
 

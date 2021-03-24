@@ -4,9 +4,7 @@ This is the example project to this blog post [SvelteKit & Strapi](https://raoul
 
 ## issues
 
-**SvelteKit** is in early development, please have a look at the [SvelteKit Docs](https://kit.svelte.dev/docs) and [SvelteKit Github](https://github.com/sveltejs/kit) to see it's progress.
-
-Right now **the `apiUrl` is hardcoded** in my SvelteKit code. Search for `// TODO` to find the spots you need to alter.
+**SvelteKit** is in ~~early development~~ public beta, please have a look at the [SvelteKit Docs](https://kit.svelte.dev/docs) and [SvelteKit Github](https://github.com/sveltejs/kit) to see it's progress.
 
 ## setup
 

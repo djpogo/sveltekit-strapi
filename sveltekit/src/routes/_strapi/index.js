@@ -1,5 +1,4 @@
-const apiUrl = 'http://localhost:1337'; // TODO put apiEndpoint in .env file
-
+const apiUrl = import.meta.env.VITE_API_URL;
 /**
  * call strapi navigation endpoint
  * @param {Object} loadOptions from sveltekit load() function
@@ -30,7 +29,7 @@ export async function loadNav({ fetch }) {
 /**
  * loadPage call strapi api for page contents
  * @param {Object} loadOptions from sveltekit load() function
- * @returns {Object} with `props`: `page`
+ * @returns {Object} with `props`: `pageData`
  */
 export async function loadPage({ page, fetch }) {
   const url = `${apiUrl}/pages?slug=${encodeURIComponent(page.path)}`;

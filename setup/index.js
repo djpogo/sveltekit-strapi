@@ -9,12 +9,17 @@ const {
 
 const SECRET_LENGTH = 128;
 
-// sapper env setup
+// sapper .env setup
 if (!fileExists('./sapper/.env')) {
   copyEnv('./sapper');
 }
 
-// strapi .evn handling
+// sveltekit .env setup
+if (!fileExists('./sveltekit/.env')) {
+  copyEnv('./sveltekit');
+}
+
+// strapi .env handling
 if (!fileExists('./strapi/.env')) {
   copyEnv('./strapi');
 }
