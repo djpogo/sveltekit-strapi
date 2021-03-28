@@ -8,9 +8,9 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-node": "next",
-		"@sveltejs/kit": "^1.0.0-next.58",
+		"@sveltejs/kit": "^1.0.0-next.61",
 		"svelte": "^3.29.0",
-		"vite": "^2.1.0"
+		"vite": "^2.1.3"
 	},
 	"type": "module",
 	"engines": {
