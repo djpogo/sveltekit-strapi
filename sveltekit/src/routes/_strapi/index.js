@@ -5,24 +5,33 @@ const apiUrl = import.meta.env.VITE_API_URL;
  * @returns {Object} with `props`: `navPages
  */
 export async function loadNav({ fetch }) {
-  const res = await fetch(`${apiUrl}/navigation`);
-  if (res.ok) {
-    const data = await res.json();
+  try {
+    const res = await fetch(`${apiUrl}/navigation`);
+    if (res.ok) {
+      const data = await res.json();
+      return {
+        props: {
+          navPages: data.Navigation.map((page) => ({
+            title: page.title,
+            url: page.page.slug,
+          })),
+        },
+      };
+    }
+
     return {
       props: {
-        navPages: data.Navigation.map((page) => ({
-          title: page.title,
-          url: page.page.slug,
-        })),
+        navPages: [],
       },
     };
+  } catch (error) {
+    console.info(`navigation laoding failed: ${error.message}`);
+    return {
+      props: {
+        navPages: [],
+      }
+    }
   }
-
-  return {
-    props: {
-      navPages: [],
-    },
-  };
 };
 
 
@@ -33,21 +42,26 @@ export async function loadNav({ fetch }) {
  */
 export async function loadPage({ page, fetch }) {
   const url = `${apiUrl}/pages?slug=${encodeURIComponent(page.path)}`;
-  const res = await fetch(url);
+  try {
+    const res = await fetch(url)
 
-  if (res.ok || res.status < 400) {
-    const [data] = await res.json();
+    if (res.ok || res.status < 400) {
+      const [data] = await res.json();
+      return {
+        props: {
+          pageData: data,
+        },
+      };
+    }
+
     return {
-      props: {
-        pageData: data,
-      },
-    };
-  }
-
-  return {
-    props: {
       status: res.status,
       error: new Error(`Could not load ${url} [${res.status}]`),
-    },
-  };
+    };
+  } catch (error) {
+    return {
+      status: 500,
+      error: new Error(error.message),
+    };
+  }
 }
