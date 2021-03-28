@@ -1,29 +1,38 @@
-# SvelteKit and strapi.io website
+# sapper (soon SvelteKit) and strapi.io website
 
-This is the example project to this blog post [SvelteKit & Strapi](https://raoulkramer.de/build-a-sveltekit-strapi-website).
+This is the example prohect to this blog post [build a sapper/strapi website](https://raoulkramer.de/build-a-sapper-strapi-website/).
 
 ## issues
 
 **SvelteKit** is in ~~early development~~ public beta, please have a look at the [SvelteKit Docs](https://kit.svelte.dev/docs) and [SvelteKit Github](https://github.com/sveltejs/kit) to see it's progress.
 
+The `SvelteKit` part of this repository is not runable right now. Stay tuned I'm working on it.
+This is the example project to this blog post [SvelteKit & Strapi](https://raoulkramer.de/build-a-sveltekit-strapi-website).
+
 ## setup
 
-You can use `npm run setup` in the project folder, to ~~create the sapper .env and~~ create/update the strapi .env file
-with the JWT_SECRETs it needs. This command will not change other values in your `.env` files.
+You can use `npm run setup` in the project folder, to create the sapper .env and create/update the strapi .env file with the JWT_SECRETs it needs. This command will not change other values in your `.env` files.
 
 If you run this command on an existing strapi instance your backend and frontend strapi users will need to sign in again.
 
-```bash
+``` bash
 $ npm run setup
 ```
 
-### SvelteKit
+### sapper
 
+``` bash
+$ cd sapper
+$ npm ci
+$ npm run dev
+```
 
-```bash
- $ cd sveltekit
- $ npm ci
- $ npm run dev
+### SvelteKit (not runable yet)
+
+``` bash
+$ cd sveltekit
+$ npm ci
+$ npm run dev
 ```
 
 ### strapi
@@ -70,4 +79,4 @@ Click on `Navigation` in the menu left and add your new created index page to th
 
 Click on `Save` and on `Publish`.
 
-Now SvelteKit application will show you a navigation menu and a blank page, ready for your project.
+Now ~~SvelteKit~~ sapper application will show you a navigation menu and a blank page, ready for your project.
