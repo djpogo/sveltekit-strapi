@@ -7,10 +7,10 @@
 		"start": "svelte-kit start"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-node": "next",
-		"@sveltejs/kit": "^1.0.0-next.61",
-		"svelte": "^3.29.0",
-		"vite": "^2.1.3"
+		"@sveltejs/adapter-node": "^1.0.0-next.12",
+		"@sveltejs/kit": "^1.0.0-next.77",
+		"svelte": "^3.37.0",
+		"vite": "^2.1.5"
 	},
 	"type": "module",
 	"engines": {
