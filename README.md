@@ -1,6 +1,6 @@
 # sapper (soon SvelteKit) and strapi.io website
 
-This is the example prohect to this blog post [build a sapper/strapi website](https://raoulkramer.de/build-a-sapper-strapi-website/).
+This is the example project to this blog post [build a sapper/strapi website](https://raoulkramer.de/build-a-sapper-strapi-website/).
 
 ## issues
 
