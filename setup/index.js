@@ -15,8 +15,8 @@ if (!fileExists('./sapper/.env')) {
 }
 
 // sveltekit .env setup
-if (!fileExists('./sveltekit/.env')) {
-  copyEnv('./sveltekit');
+if (!fileExists('./svelte-kit/.env')) {
+  copyEnv('./svelte-kit');
 }
 
 // strapi .env handling
