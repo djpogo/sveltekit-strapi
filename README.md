@@ -30,7 +30,7 @@ $ npm run dev
 ### SvelteKit (not runable yet)
 
 ``` bash
-$ cd sveltekit
+$ cd svelte-kit
 $ npm ci
 $ npm run dev
 ```
